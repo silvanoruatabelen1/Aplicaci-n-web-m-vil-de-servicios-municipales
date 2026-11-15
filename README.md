@@ -83,14 +83,14 @@ public/               SPA, estilos, Web App Manifest y service worker
 src/seed.js            Catálogos y estado inicial (datos de simulación)
 server.js              API JSON, validación, PDF y servidor web local
 tests/api.test.js      Pruebas automáticas de integración HTTP
-docs/                  Arquitectura, matriz de consigna, guía de demo y fuentes
-evidencias/            Previsualizaciones de UI (incluidas en el ZIP externo)
-Informe_TP5.pdf       Informe de entrega (se proporciona en el ZIP externo)
+docs/                  Arquitectura fuente (DOT), matriz de consigna, guía de demo y fuentes
+evidencias/            Previsualizaciones de UI (disponibles en el paquete ZIP de entrega)
+Informe_TP5.pdf       Informe de entrega (disponible en el paquete ZIP, no incluido en este repositorio)
 ```
 
 ## Repositorio Git y entrega
 
-Esta carpeta es un proyecto autónomo listo para versionar. Para publicarlo en un repositorio GitHub de tu propiedad:
+Este código está publicado como repositorio académico. El informe PDF y las capturas de evidencia se incluyen en el ZIP entregado por separado. Para publicarlo en otro repositorio GitHub:
 
 ```bash
 git init
@@ -101,7 +101,7 @@ git remote add origin https://github.com/TU_USUARIO/TU_REPOSITORIO.git
 git push -u origin main
 ```
 
-Este repositorio ya se encuentra publicado en GitHub. El ZIP con el informe PDF y las capturas se entrega por separado.
+Sustituir `TU_USUARIO/TU_REPOSITORIO` al migrarlo. El bundle Git offline y los archivos binarios se entregan en el paquete ZIP externo.
 
 ## Limitaciones y pendientes reales
 

@@ -1,0 +1,34 @@
+digraph TP5 {
+  graph [rankdir=TB, bgcolor="transparent", compound=true, pad="0.3", nodesep="0.45", ranksep="0.85", fontname="DejaVu Sans", fontsize=15, labelloc=t, label="Arquitectura implementada · San Francisco Cerca (DEMO)"];
+  node [shape=box, style="rounded,filled", color="#afcad0", fillcolor="#f3fbf9", fontname="DejaVu Sans", fontsize=11, margin="0.17,0.13"];
+  edge [color="#6b9b9c", arrowsize=0.8, fontname="DejaVu Sans", fontsize=9];
+  subgraph cluster_front {
+    label="CLIENTE WEB MÓVIL · SPA / PWA"; labelloc=t; color="#dcece9"; style="rounded";
+    views [label="Presentación responsive\n7 módulos de servicios",fillcolor="#dff5eb"];
+    logic [label="Interacciones y estado\nValidación de formulario",fillcolor="#eff9f7"];
+    pwa [label="Service Worker\nCaché de shell + aviso local",fillcolor="#e8f2fa"];
+    geo [label="Geolocalización opcional\nCálculo de cercanía",fillcolor="#e8f2fa"];
+    views -> logic [label="eventos"];
+    logic -> pwa [style=dotted, label="permisos"];
+    logic -> geo [style=dotted];
+  }
+  subgraph cluster_back {
+    label="API HTTP LOCAL · Node.js";color="#d5e8e8";style="rounded";
+    router [label="Router /api/*\nJSON + validación", fillcolor="#daecef"];
+    modules [label="Servicios de simulación\nBicis · Tributos · Reclamos\nAlarmas · Parking · Avisos",fillcolor="#eaf8f5"];
+    pdf [label="Generación PDF\nCedulones / comprobantes", fillcolor="#f9f1dd"];
+    router -> modules;modules -> pdf;
+  }
+  subgraph cluster_store {
+    label="DATOS DE PRUEBA";color="#eadfc7";style="rounded";
+    seed [label="Catálogos iniciales ficticios\nsrc/seed.js",fillcolor="#fff8e6"];
+    store [label="Estado JSON local\ndata/demo-state.json",fillcolor="#fff8e6"];
+    seed -> store [label="inicialización"];
+  }
+  logic -> router [label="HTTP JSON\n(mismo origen)", color="#1c8b7c", penwidth=2];
+  modules -> store [label="lectura / escritura"];
+  source [label="Sitio municipal oficial\ncontactos públicos verificados",shape=note,fillcolor="#f1f4f6",color="#c6d2d8"];
+  source -> seed [style=dashed, label="referencia"];
+  future [label="NO IMPLEMENTADO:\nAPIs municipales · Auth\nPush remoto · Pago real",style="dashed,rounded",color="#c16a57",fontcolor="#a34c3e",fillcolor="#fff7f5"];
+  router -> future [style=dashed,color="#c16a57",label="integración futura"];
+}

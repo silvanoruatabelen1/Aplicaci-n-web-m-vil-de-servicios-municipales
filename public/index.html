@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="es-AR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#14334a">
+  <meta name="description" content="Prototipo académico de servicios municipales para San Francisco, Córdoba. Todos los movimientos son simulados.">
+  <link rel="manifest" href="/manifest.webmanifest">
+  <link rel="icon" type="image/svg+xml" href="/assets/icon.svg">
+  <link rel="stylesheet" href="/styles.css">
+  <title>San Francisco Cerca · Prototipo académico</title>
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" aria-label="Navegación principal">
+      <a href="#/inicio" class="brand" aria-label="San Francisco Cerca, ir al inicio"><span class="brand-icon" aria-hidden="true">sf<span>·</span></span><span class="brand-name">San Francisco <strong>Cerca</strong><small>Servicios para tu día a día</small></span></a>
+      <div class="sidebar-label">SERVICIOS</div>
+      <nav class="side-links" id="side-nav">
+        <a href="#/inicio" data-nav="inicio"><span>⌂</span> Inicio</a>
+        <a href="#/bicicletas" data-nav="bicicletas"><span>♧</span> Bicicletas públicas</a>
+        <a href="#/tributos" data-nav="tributos"><span>▤</span> Tributos</a>
+        <a href="#/reclamos" data-nav="reclamos"><span>▧</span> Reclamos</a>
+        <a href="#/contactos" data-nav="contactos"><span>☎</span> Atención al vecino</a>
+        <a href="#/alarmas" data-nav="alarmas"><span>◉</span> Alarmas comunitarias</a>
+        <a href="#/estacionamiento" data-nav="estacionamiento"><span>Ⓟ</span> Estacionamiento</a>
+        <a href="#/avisos" data-nav="avisos"><span>♢</span> Avisos y alertas</a>
+      </nav>
+      <div class="side-foot"><span class="demo-dot"></span> Entorno de simulación <small>Proyecto académico · TP5</small></div>
+    </aside>
+    <div class="main-column">
+      <header class="topbar">
+        <div class="location-tag"><span class="location-icon">◈</span><div><small>ESTÁS VIENDO</small><strong>San Francisco, Córdoba</strong></div></div>
+        <div class="topbar-actions"><span class="context-pill">DEMO ACADÉMICA</span><a href="#/avisos" class="top-alert" aria-label="Ver notificaciones">♢<span id="notice-count">0</span></a></div>
+      </header>
+      <main id="screen" tabindex="-1" aria-live="polite"><section class="loading-view"><div class="loading-symbol"></div><p>Cargando servicios de demostración…</p></section></main>
+      <footer class="site-footer">Prototipo académico independiente · Datos simulados salvo contactos públicos identificados · <strong>Silvano Ruata Maria Belen</strong></footer>
+    </div>
+  </div>
+  <nav class="mobile-nav" aria-label="Navegación móvil">
+    <a href="#/inicio" data-nav="inicio"><span>⌂</span>Inicio</a>
+    <a href="#/bicicletas" data-nav="bicicletas"><span>♧</span>Bicis</a>
+    <a href="#/reclamos" data-nav="reclamos"><span>▧</span>Reclamos</a>
+    <a href="#/estacionamiento" data-nav="estacionamiento"><span>Ⓟ</span>Parking</a>
+    <a href="#/avisos" data-nav="avisos"><span>♢</span>Avisos</a>
+  </nav>
+  <div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
+  <script src="/app.js" defer></script>
+</body>
+</html>
