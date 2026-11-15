@@ -1,9 +1,15 @@
-# Estado del repositorio público/privado
+# Estado de publicación del TP5
 
-Este repositorio contiene el **código fuente ejecutable**, pruebas automatizadas, guía de demostración y matriz de cumplimiento. Es un prototipo académico, no oficial.
+**Autor:** Silvano Ruata Maria Belen
 
-El informe técnico PDF, el diagrama ilustrado PNG y las evidencias visuales se encuentran en el ZIP de entrega proporcionado por separado; el diagrama fuente reproducible está en `docs/arquitectura.dot`.
+El repositorio contiene el código fuente, las pruebas automatizadas, el informe PDF, el diagrama de arquitectura (fuente DOT y PNG) y las capturas de previsualización de escritorio y móvil.
 
-No se incluyen secretos, credenciales ni datos reales. No desplegar el backend en Internet.
+- Repositorio: https://github.com/silvanoruatabelen1/Aplicaci-n-web-m-vil-de-servicios-municipales
+- Rama principal: `main`.
+- Estado: prototipo académico local con servicios municipales simulados, **no oficial**.
+- Ejecución: `npm start` con Node.js 20 o superior; abrir `http://localhost:4173`.
+- Pruebas: `npm test`.
+- Limitaciones: sin API municipal oficial, pagos reales ni notificaciones push remotas; pruebas de compatibilidad y rendimiento pendientes.
+- El proyecto no debe desplegarse públicamente sin incorporar autenticación, privacidad y medidas de seguridad adecuadas.
 
-Autor: Silvano Ruata Maria Belen.
+Este documento describe la publicación del código, no una entrega aprobada ni una implementación municipal real.
