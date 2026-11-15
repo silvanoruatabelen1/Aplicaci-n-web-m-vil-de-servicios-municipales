@@ -83,25 +83,26 @@ public/               SPA, estilos, Web App Manifest y service worker
 src/seed.js            Catálogos y estado inicial (datos de simulación)
 server.js              API JSON, validación, PDF y servidor web local
 tests/api.test.js      Pruebas automáticas de integración HTTP
-docs/                  Arquitectura fuente (DOT), matriz de consigna, guía de demo y fuentes
-evidencias/            Previsualizaciones de UI (disponibles en el paquete ZIP de entrega)
-Informe_TP5.pdf       Informe de entrega (disponible en el paquete ZIP, no incluido en este repositorio)
+docs/                  Arquitectura, matriz de consigna, guía de demo y fuentes
+evidencias/            Previsualizaciones de UI en Chromium con API sustituida
+Informe_TP5.pdf       Informe de entrega (también se entrega por separado)
 ```
 
 ## Repositorio Git y entrega
 
-Este código está publicado como repositorio académico. El informe PDF y las capturas de evidencia se incluyen en el ZIP entregado por separado. Para publicarlo en otro repositorio GitHub:
+Este proyecto está publicado con el código fuente, pruebas, informe PDF, diagrama y capturas en el repositorio:
+
+https://github.com/silvanoruatabelen1/Aplicaci-n-web-m-vil-de-servicios-municipales
+
+Para ejecutarlo desde GitHub:
 
 ```bash
-git init
-git add .
-git commit -m "TP5: prototipo web movil servicios municipales"
-git branch -M main
-git remote add origin https://github.com/TU_USUARIO/TU_REPOSITORIO.git
-git push -u origin main
+git clone https://github.com/silvanoruatabelen1/Aplicaci-n-web-m-vil-de-servicios-municipales.git
+cd Aplicaci-n-web-m-vil-de-servicios-municipales
+npm start
 ```
 
-Sustituir `TU_USUARIO/TU_REPOSITORIO` al migrarlo. El bundle Git offline y los archivos binarios se entregan en el paquete ZIP externo.
+**Atención:** el repositorio es privado. Para que la cátedra pueda acceder, debe tener permiso de lectura. El servidor de esta demo solo escucha en localhost y no está desplegado públicamente.
 
 ## Limitaciones y pendientes reales
 
